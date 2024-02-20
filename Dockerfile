@@ -1,4 +1,7 @@
 FROM ghcr.io/actions/actions-runner:latest
 
-RUN apt-get update && apt-get install -y \
+USER root
+RUN apt update -y && apt install -y \
     git
+
+USER runner
